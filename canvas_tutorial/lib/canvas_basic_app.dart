@@ -1,14 +1,14 @@
 import 'package:canvas_tutorial/line_painter.dart';
 import 'package:flutter/material.dart';
 
-class CanvasTutorialApp extends StatefulWidget {
-  const CanvasTutorialApp({super.key});
+class CanvasBasicApp extends StatefulWidget {
+  const CanvasBasicApp({super.key});
 
   @override
   State createState() => _CanvasTutorialAppState();
 }
 
-class _CanvasTutorialAppState extends State<CanvasTutorialApp> {
+class _CanvasTutorialAppState extends State<CanvasBasicApp> {
   final List<Offset> _points = [];
 
   void _addPoint(Offset point) {
@@ -37,7 +37,12 @@ class _CanvasTutorialAppState extends State<CanvasTutorialApp> {
             _addPoint(details.localPosition);
           },
           child: CustomPaint(
-            painter: LinePainter(points: _points),
+            painter: LinePainter(
+              points: _points,
+              linePaint: Paint()
+                ..color = Colors.black
+                ..strokeWidth = 3.0,
+            ),
             child: Container(),
           ),
         ),
