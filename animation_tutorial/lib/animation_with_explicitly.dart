@@ -32,7 +32,7 @@ class _AnimationWithExplicitlyState extends State<AnimationWithExplicitly>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${AnimationType.implicitly}'),
+        title: Text('${AnimationType.explicitly}'),
       ),
       body: Center(
         child: AnimatedBuilder(

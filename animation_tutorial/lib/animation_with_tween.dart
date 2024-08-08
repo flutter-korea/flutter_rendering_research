@@ -37,7 +37,7 @@ class _AnimationWithTweenState extends State<AnimationWithTween>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${AnimationType.implicitly}'),
+        title: Text('${AnimationType.tween}'),
       ),
       body: Center(
         child: Container(

@@ -1,7 +1,9 @@
 import 'package:animation_tutorial/animation_with_explicitly.dart';
 import 'package:animation_tutorial/animation_with_implicitly.dart';
+import 'package:animation_tutorial/animation_with_listenable_builder.dart';
 import 'package:animation_tutorial/animation_with_set_state.dart';
 import 'package:animation_tutorial/animation_with_tween.dart';
+import 'package:animation_tutorial/animation_with_value_listenable_builder.dart';
 import 'package:animation_tutorial/common.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +34,10 @@ class AnimationBasicApp extends StatelessWidget {
                         builder: (context) => switch (animationType) {
                           AnimationType.setState =>
                             const AnimationWithSetState(),
+                          AnimationType.listenableBuilder =>
+                            const AnimationWithValuelistenable(),
+                          AnimationType.valueListenableBuilder =>
+                            const AnimationWithValueListenableBuilder(),
                           AnimationType.implicitly =>
                             const AnimationWithImplicitly(),
                           AnimationType.explicitly =>

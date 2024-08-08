@@ -28,7 +28,7 @@ class _AnimationWithSetStateState extends State<AnimationWithSetState> {
 
   _onTick(Duration elapsed) {
     setState(() {
-      if (_length >= 300) {
+      if (_length > 300 || _length < 100) {
         _offset = -_offset;
       }
       _length = _length + _offset;
